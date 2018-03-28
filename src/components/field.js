@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import fieldBG from '../images/grass.jpg';
+
+import Hole from './hole';
+
+
 
 class Field extends Component {
 
 	render(){
 		return (
 			<div className="field-bg">
-				
+				<Hole />
 			</div>
 		)
 	}

@@ -35,3 +35,27 @@
   height: 100vh;
 }
 
+.dirt-bg {
+  background: url('./images/dirt.jpg') no-repeat center center;
+  background-size: cover;
+  height: 10%;
+  width: 10%;
+}
+
+.dirt-1 {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.dirt-2 {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+}
+
+.dirt-3 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
