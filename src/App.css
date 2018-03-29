@@ -62,4 +62,15 @@
 
 .mole-img {
   width: 80%;
+
 }
+
+.in-ground {
+  transform: translateY(70px);
+}
+
+.mole-img.pop {
+  transform: translateY(0);
+}
+
+
