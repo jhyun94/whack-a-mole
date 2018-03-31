@@ -13,7 +13,12 @@ class App extends Component {
       this.state = {
         score: 0,
         play: false,
-        finished: false
+        finished: false,
+        moles: {
+          1: false,
+          2: false,
+          3: true
+        }
       }
     this.start = this.start.bind(this);
   }
@@ -28,7 +33,7 @@ class App extends Component {
     let holes = [];
     for( var i = 1; i <= 3; i++){
       holes.push(
-        <Hole key={i} holeNumber={i} />)
+        <Hole key={i} mole={this.state.moles[i]} holeNumber={i}/>)
     }
     return holes;
   }

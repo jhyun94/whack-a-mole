@@ -3,10 +3,11 @@ import mole from '../images/mole.jpeg';
 
 
 function Hole(props) {
-	const className = `dirt-bg dirt-${props.holeNumber} text-center`;
+	const holeClass = `dirt-bg dirt-${props.holeNumber} text-center`;
+	const moleClass = `mole-img in-ground ${props.mole ? 'pop' : ''}`;
 	return (
-		<div className={className}>
-			<img src={mole} className='mole-img in-ground'/>
+		<div className={holeClass}>
+			<img src={mole} className={moleClass}/>
 		</div>
 	)
 }
