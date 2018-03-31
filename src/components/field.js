@@ -15,6 +15,9 @@ class Field extends Component {
 				<div className="text-center py-3">
 					<h3>SCORE: {this.props.score}</h3>
 				</div>
+				<div>
+					<button>Play</button>
+				</div>
 				<Hole />
 			</div>
 		)
