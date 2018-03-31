@@ -24,6 +24,7 @@ class App extends Component {
     this.start = this.start.bind(this);
   }
   start(){
+    this.setState({score: 0})
     this.setState({play: true})
     setTimeout( () => {
       this.setState({finished: true, play: false });
