@@ -6,8 +6,12 @@ export default function PlayButton(props) {
 	}
 
 	return (
-		<div>
-			<button onClick={props.onButtonClick}>Play {props.finished ? 'Again' : ''}</button>
+		<div className="text-center play-btn-container">
+			<button 
+				onClick={props.onButtonClick}
+				className="btn btn-primary btn-lg">
+				Play {props.finished ? 'Again' : ''}
+			</button>
 		</div>
 	)
 }
