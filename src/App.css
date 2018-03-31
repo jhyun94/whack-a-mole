@@ -62,7 +62,7 @@
 
 .mole-img {
   width: 80%;
-
+  opacity: 0;
 }
 
 .in-ground {
@@ -70,7 +70,9 @@
 }
 
 .mole-img.pop {
-  transform: translateY(0);
+  transform: translateY(-20px);
+  opacity: 1;
+  transition: all .2s ease-in-out;
 }
 
 
