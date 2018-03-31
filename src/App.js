@@ -28,7 +28,6 @@ class App extends Component {
       this.setState({finished: true, play: false });
       clearInterval(peep);
     }, 5000)
-
     const peep = setInterval( () => {
       this.molePop()
     }, 1000)
@@ -41,7 +40,8 @@ class App extends Component {
         <Hole key={i}
          mole={this.state.moles[i]} 
          holeNumber={i}
-         sendNumber={ (number) => this.moleRecover(number)}/>)
+         sendNumber={ (number) => this.moleRecover(number)}
+         onMoleSmack={ ()=> this.smacked() }/>)
     }
     return holes;
   }
@@ -56,10 +56,14 @@ class App extends Component {
   }
 
   moleRecover(number){
-    console.log(this)
     let moles = this.state.moles;
     moles[number] = false;
     this.setState({ moles: moles});
+  }
+
+  smacked(){
+    const num = this.state.score + 1;
+    this.setState({score: num})
   }
 
   render() {

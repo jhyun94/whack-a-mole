@@ -14,7 +14,7 @@ function Hole(props) {
 
 	return (
 		<div className={holeClass}>
-			<img src={mole} className={moleClass}/>
+			<img src={mole} className={moleClass} onClick={props.onMoleSmack}/>
 		</div>
 	)
 }
