@@ -17,16 +17,21 @@ class App extends Component {
         moles: {
           1: false,
           2: false,
-          3: true
+          3: false
         }
       }
     this.start = this.start.bind(this);
   }
   start(){
     this.setState({play: true})
-    setTimeout( () => this.setState({finished: true, play: false }), 5000)
-    this.generateHole();
+    setTimeout( () => {
+      this.setState({finished: true, play: false });
+      clearInterval(peep);
+    }, 5000)
 
+    const peep = setInterval( () => {
+      this.molePop()
+    }, 1000)
   }
 
   generateHole(){
@@ -39,6 +44,12 @@ class App extends Component {
   }
 
   molePop(){
+    let moles = this.state.moles;
+    let num = Math.floor( Math.random() * 3 + 1);
+    if (moles[num] === false){
+      moles[num] = true
+    }
+    this.setState({ moles: moles})
   }
 
   render() {
