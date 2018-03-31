@@ -18,7 +18,8 @@ class App extends Component {
           1: false,
           2: false,
           3: false
-        }
+        },
+        bestScore: 0
       }
     this.start = this.start.bind(this);
   }
@@ -69,7 +70,7 @@ class App extends Component {
   render() {
     return (
       <div className="field-bg">
-        <Score score={this.state.score}/>
+        <Score score={this.state.score} bestScore={this.state.bestScore}/>
         <PlayButton play={this.state.play}
           onButtonClick={this.start}
           finished={this.state.finished}
