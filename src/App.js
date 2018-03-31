@@ -11,7 +11,8 @@ class App extends Component {
   constructor(props){
     super(props)
       this.state = {
-        score: 0
+        score: 0,
+        play: false
       }
   }
 
@@ -20,7 +21,7 @@ class App extends Component {
     return (
       <div className="field-bg">
         <Score score={this.state.score}/>
-        <PlayButton />
+          <PlayButton show={this.state.play}/>
         <Hole />
       </div>
     )
