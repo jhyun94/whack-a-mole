@@ -28,6 +28,7 @@ class App extends Component {
     setTimeout( () => {
       this.setState({finished: true, play: false });
       clearInterval(peep);
+      this.checkBestScore();
     }, 5000)
     const peep = setInterval( () => {
       this.molePop()
@@ -65,6 +66,13 @@ class App extends Component {
   smacked(){
     const num = this.state.score + 1;
     this.setState({score: num})
+  }
+
+  checkBestScore(){
+
+    if( this.state.score > this.state.bestScore) {
+      this.setState({ bestScore: this.state.score})
+    }
   }
 
   render() {
