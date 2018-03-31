@@ -20,17 +20,31 @@ class App extends Component {
   start(){
     this.setState({play: true})
     setTimeout( () => this.setState({finished: true, play: false }), 5000)
+    this.generateHole();
 
+  }
+
+  generateHole(){
+    let holes = [];
+    for( var i = 1; i <= 3; i++){
+      holes.push(
+        <Hole key={i} holeNumber={i} />)
+    }
+    return holes;
+  }
+
+  molePop(){
   }
 
   render() {
     return (
       <div className="field-bg">
         <Score score={this.state.score}/>
-          <PlayButton play={this.state.play}
-            onButtonClick={this.start}
-            finished={this.state.finished}/>
-        <Hole />
+        <PlayButton play={this.state.play}
+          onButtonClick={this.start}
+          finished={this.state.finished}
+        />
+        {this.generateHole()}
       </div>
     )
   }
