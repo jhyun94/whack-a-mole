@@ -12,16 +12,24 @@ class App extends Component {
     super(props)
       this.state = {
         score: 0,
-        play: false
+        play: false,
+        finished: false
       }
+    this.start = this.start.bind(this);
   }
+  start(){
+    this.setState({play: true})
+    setTimeout( () => this.setState({finished: true, play: false }), 5000)
 
+  }
 
   render() {
     return (
       <div className="field-bg">
         <Score score={this.state.score}/>
-          <PlayButton show={this.state.play}/>
+          <PlayButton play={this.state.play}
+            onButtonClick={this.start}
+            finished={this.state.finished}/>
         <Hole />
       </div>
     )
