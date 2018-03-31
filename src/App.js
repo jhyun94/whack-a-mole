@@ -38,7 +38,10 @@ class App extends Component {
     let holes = [];
     for( var i = 1; i <= 3; i++){
       holes.push(
-        <Hole key={i} mole={this.state.moles[i]} holeNumber={i}/>)
+        <Hole key={i}
+         mole={this.state.moles[i]} 
+         holeNumber={i}
+         sendNumber={ (number) => this.moleRecover(number)}/>)
     }
     return holes;
   }
@@ -50,6 +53,13 @@ class App extends Component {
       moles[num] = true
     }
     this.setState({ moles: moles})
+  }
+
+  moleRecover(number){
+    console.log(this)
+    let moles = this.state.moles;
+    moles[number] = false;
+    this.setState({ moles: moles});
   }
 
   render() {
