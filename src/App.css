@@ -36,9 +36,9 @@
 }
 
 .dirt-bg {
-  background: url('./images/dirt.jpg') no-repeat center center;
+  background: url('./images/dirt2.svg') no-repeat center center;
   background-size: cover;
-  height: 10%;
+  height: 2%;
   width: 10%;
 }
 
@@ -61,16 +61,16 @@
 }
 
 .mole-img {
-  width: 80%;
+  width: 60%;
   opacity: 0;
 }
 
 .in-ground {
-  transform: translateY(70px);
+  transform: translateY(20px);
 }
 
 .mole-img.pop {
-  transform: translateY(-20px);
+  transform: translateY(-71px);
   opacity: 1;
   transition: all .2s ease-in-out;
 }
