@@ -36,7 +36,7 @@
 }
 
 .dirt-bg {
-  background: url('./images/dirt2.svg') no-repeat center center;
+  background: url('./images/dirt.svg') no-repeat center center;
   background-size: cover;
   height: 2%;
   width: 10%;

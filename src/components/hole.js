@@ -1,5 +1,5 @@
 import React from 'react';
-import mole from '../images/mole2.png';
+import mole from '../images/mole.png';
 
 
 function Hole(props) {
