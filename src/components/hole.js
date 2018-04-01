@@ -9,7 +9,7 @@ function Hole(props) {
 	if (props.mole){
 		setTimeout( () =>{
 			props.sendNumber(props.holeNumber)
-		}, 700)
+		}, 900)
 	}
 
 	return (

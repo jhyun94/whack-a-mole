@@ -29,7 +29,7 @@ class App extends Component {
       this.setState({finished: true, play: false });
       clearInterval(peep);
       this.checkBestScore();
-    }, 5000)
+    }, 15000)
     const peep = setInterval( () => {
       this.molePop()
     }, 1000)
